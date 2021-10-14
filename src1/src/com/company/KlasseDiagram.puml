@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Main {
+main()
+}
+class Dialog {
+double number
+doDiag()
+}
+class CalculateVat{
+int PCRVAT
+double VAT
+doVAT()
+}
+class View{
+String MSG
+String CURRENCY
+doView()
+}
+class Controller {
+double userIn
+double moms
+runController()
+}
+
+Main --|> Controller
+Controller --|> Dialog
+Controller --|> CalculateVat
+Controller --|> View
+
+
+@enduml
